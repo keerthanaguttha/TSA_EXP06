@@ -17,9 +17,9 @@ Evaluate the model predictions against test data
 6. Create teh final model and predict future data and plot it
 
 ## PROGRAM:
-```
-### Importing necessary modules
 
+### Importing necessary modules
+```
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.tsa.holtwinters import ExponentialSmoothing
@@ -49,8 +49,7 @@ decomposition = seasonal_decompose(data_monthly, model="additive")
 decomposition.plot()
 plt.show()
 ```
-### Split test,train data,create a model using Holt-Winters method, train with train data and Evaluate
-the model predictions against test data
+### Split test,train data,create a model using Holt-Winters method, train with train data and Evaluate the model predictions against test data
 ```
 scaled_data = scaled_data + 1
 train_data = scaled_data[:int(len(scaled_data) * 0.8)]
